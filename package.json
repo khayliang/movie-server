@@ -1,0 +1,27 @@
+{
+  "name": "movie-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khayliang/movie-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khayliang/movie-server/issues"
+  },
+  "homepage": "https://github.com/khayliang/movie-server#readme",
+  "dependencies": {
+    "serverless-dynamodb-local": "^0.2.35"
+  },
+  "devDependencies": {
+    "serverless-offline": "^6.8.0",
+    "serverless-webpack": "^5.3.5",
+    "webpack": "^5.10.3"
+  }
+}
