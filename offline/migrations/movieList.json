@@ -1,0 +1,42 @@
+[
+  {
+    "actors": {
+      "SS": ["Shouko Nishimiya", "Shoya Ishida", "Yuzuru Nishimiya"]
+    },
+    "imageUrl": {
+      "S": "https://m.media-amazon.com/images/M/MV5BZGRkOGMxYTUtZTBhYS00NzI3LWEzMDQtOWRhMmNjNjJjMzM4XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
+    },
+    "ratings": {
+      "N": "4.5"
+    },
+    "description": {
+      "S": "A young man is ostracized by his classmates after he bullies a deaf girl to the point where she moves away. Years later, he sets off on a path for redemption."
+    },
+    "bannerUrl": {
+      "S": "https://cdn141.picsart.com/291398593004201.jpg?type=webp&to=min&r=1280"
+    },
+    "title": {
+      "S": "Koe No katachi"
+    }
+  },
+  {
+    "actors": {
+      "SS": ["Cho Yeo‑jeong", "Park So‑dam", "Woo‑sik Choi"]
+    },
+    "imageUrl": {
+      "S": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg"
+    },
+    "ratings": {
+      "N": "4.5"
+    },
+    "description": {
+      "S": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan."
+    },
+    "bannerUrl": {
+      "S": "https://i.pinimg.com/originals/87/fe/f1/87fef1dd525c6f21a72cb51fe96d234e.png"
+    },
+    "title": {
+      "S": "Parasite"
+    }
+  }
+]
