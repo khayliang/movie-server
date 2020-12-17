@@ -55,7 +55,7 @@ plugins:
   - serverless-dynamodb-local
 
 functions:
-  get-speech:
+  get-movies:
     handler: lambdas/getMovies.handler
     events:
       - http:
