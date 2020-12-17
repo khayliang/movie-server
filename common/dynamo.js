@@ -1,29 +1,39 @@
-const AWS = require('aws-sdk')
+const AWS = require('aws-sdk');
 
-let options = {}
+let options = {};
 
-if (process.env.IS_OFFLINE){
+if (process.env.IS_OFFLINE) {
   options = {
     region: 'localhost',
-    endpoint: 'https://localhost:2000'
-  }
+    endpoint: 'http://localhost:2000',
+  };
+}
+
+if (process.env.JEST_WORKER_ID) {
+  options = {
+    endpoint: 'http://localhost:2000',
+    region: 'local-env',
+    sslEnabled: false,
+  };
 }
 
 const documentClient = new AWS.DynamoDB.DocumentClient(options);
 
 const Dynamo = {
-  async getMoviesList(){
+  async getMoviesList(tableName) {
     const params = {
-      TableName: process.env.tableName,
+      TableName: tableName,
+    };
+    try {
+      const res = await documentClient.scan(params).promise();
+      if (res == undefined || res.length == 0) {
+        throw Error('No movies :(');
+      }
+      return res.Items;
+    } catch (err) {
+      throw Error(err.message);
     }
-    console.log(params)
-    const res = await documentClient.scan(params).promise()
-    console.log(res)
-    if(res == undefined || res.length == 0){
-      throw Error('No movies :(');
-    }
-    return res.Items
-  }
-}
+  },
+};
 
-module.exports = Dynamo
+module.exports = Dynamo;
