@@ -9,6 +9,7 @@ test('Dynamo has getMoviesList function', () => {
 });
 
 let resp = null;
+
 test('Dynamo getMoviesList returns movie array', async () => {
   expect.assertions(2);
   try {
