@@ -39,8 +39,7 @@ jobs:
       run: |
         npm run install-local-db
     - name: Start offline serverless
-      run: |
-        npm run serverless-offline
+      run: npm run serverless-offline
     - name: Run unit tests
       run: |
         npm run test
