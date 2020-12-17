@@ -27,9 +27,20 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - uses: actions/setup-java@v1
+      with:
+        java-version: '9.0.4' # The JDK version to make available on the path.
+        java-package: jdk # (jre, jdk, or jdk+fx) - defaults to jdk
+        architecture: x64 # (x64 or x86) - defaults to x64
     - name: npm Install
       run: |
         npm i
+    - name: Setup offline Serverless
+      run: |
+        sls dynamodb install
+    - name: Start offline Serverless
+      run: |
+        npm run serverless-offline
     - name: npm Test
       run: |
         npm run test
