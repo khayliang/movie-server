@@ -59,7 +59,7 @@ functions:
     handler: lambdas/getMovies.handler
     events:
       - http:
-          path: get_speech
+          path: get_movies
           method: GET
           cors: false
 
