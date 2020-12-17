@@ -35,16 +35,16 @@ jobs:
     - name: npm Install
       run: |
         npm i
-    - name: Setup offline Serverless
+    - name: Setup offline serverless
       run: |
-        sls dynamodb install
-    - name: Start offline Serverless
+        npm run install-local-db
+    - name: Start offline serverless
       run: |
         npm run serverless-offline
-    - name: npm Test
+    - name: Run unit tests
       run: |
         npm run test
-    - name: serverless deploy
+    - name: Deploy serverless
       uses: serverless/github-action@master
       with:
         args: deploy

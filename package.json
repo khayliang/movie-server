@@ -6,6 +6,7 @@
   "scripts": {
     "test": "./node_modules/.bin/jest",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "install-local-db": "serverless dynamodb install",
     "serverless-offline": "sls offline start --location . --seed=movies"
   },
   "repository": {
@@ -18,7 +19,9 @@
     "url": "https://github.com/khayliang/movie-server/issues"
   },
   "homepage": "https://github.com/khayliang/movie-server#readme",
-  "dependencies": {},
+  "dependencies": {
+    "serverless": "^2.15.0"
+  },
   "devDependencies": {
     "@shelf/jest-dynamodb": "^1.7.0",
     "jest": "^26.6.3",
